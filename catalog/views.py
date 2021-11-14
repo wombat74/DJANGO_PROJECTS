@@ -11,7 +11,7 @@ def index(request):
     # Available books (status = 'a')
     num_instances_available = BookInstance.objects.filter(status__exact='a').count()
 
-    # The 'all()' is implied by default
+    # The 'all()' is implied by default.
     num_authors = Author.objects.count()
 
     context = {
